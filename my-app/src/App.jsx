@@ -5,6 +5,8 @@ import viteLogo from "/vite.svg";
 function App() {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [isEditing, setIsEditing] = useState(null);
+  const [editValue, setEditValue] = useState("");
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +25,22 @@ function App() {
       )
     );
   };
+
+  const onHandleEditClick = (todo) => {
+    setIsEditing(todo);
+  };
+  const onHandleSaveEdit = (e) => {
+    e.preventDefault();
+    setTodos(
+      todos.map((todo) =>
+        todo.id == isEditing.id ? { ...todo, text: editValue } : todo
+      )
+    );
+    setIsEditing(null);
+  };
+  const onHandleCancelSave = () => {
+    setIsEditing(null);
+  };
   return (
     <>
       {JSON.stringify(todos)}
@@ -39,14 +57,34 @@ function App() {
           return (
             <li key={todo.id}>
               <input type="checkbox" onChange={() => toggleTodo(todo.id)} />
-              <span
-                style={{
-                  textDecoration: todo.done == true ? "line-through" : "none",
-                }}
-              >
-                {todo.text}
-              </span>
-              <button onClick={() => onHandleRemove(todo.id)}>Delete</button>
+              {isEditing && isEditing.id == todo.id ? (
+                <>
+                  <form action="" onSubmit={onHandleSaveEdit}>
+                    <input
+                      type="text"
+                      defaultValue={isEditing.text}
+                      onInput={(e) => setEditValue(e.target.value)}
+                    />
+                    <button>Save</button>
+                    <button onClick={onHandleCancelSave}>Cancel</button>
+                  </form>
+                </>
+              ) : (
+                <>
+                  <span
+                    style={{
+                      textDecoration:
+                        todo.done == true ? "line-through" : "none",
+                    }}
+                    onClick={() => onHandleEditClick(todo)}
+                  >
+                    {todo.text}
+                  </span>
+                  <button onClick={() => onHandleRemove(todo.id)}>
+                    Delete
+                  </button>
+                </>
+              )}
             </li>
           );
         })}
