@@ -6,7 +6,8 @@
       "price": 19.99,
       "imageUrl": "http://example.com/product1.jpg",
       "available": true,
-      "description": "Description for product 1"
+      "description": "Description for product 1",
+      "category": "category1"
     },
     {
       "id": 2,
