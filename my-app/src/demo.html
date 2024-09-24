@@ -7,24 +7,9 @@
   </head>
   <body>
     <script>
-      const useState = (initialValue) => {
-        let state = initialValue;
-
-        const getState = () => {
-          return state;
-        };
-
-        const setState = (newValue) => {
-          state = newValue;
-        };
-
-        return [getState, setState];
-      };
-
-      const [posts, setIndex] = useState(10);
-
-      setIndex(20);
-      console.log(index());
+      const name = "sontv";
+      const newProduct = { [name]: "New Product" };
+      console.log(newProduct.sontv);
     </script>
   </body>
 </html>
