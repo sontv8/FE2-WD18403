@@ -110,6 +110,24 @@
       "description": "abcd",
       "category": "2",
       "id": 13
+    },
+    {
+      "name": "New Product",
+      "price": "10000",
+      "imageUrl": "https://picsum.photos/200/120",
+      "available": false,
+      "description": "abcd",
+      "category": "2",
+      "id": 14
+    },
+    {
+      "name": "New Product 2",
+      "price": "1000",
+      "imageUrl": "abcd",
+      "available": true,
+      "description": "abcd",
+      "category": "1",
+      "id": 15
     }
   ]
 }
