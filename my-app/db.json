@@ -83,51 +83,6 @@
       "pictureUrl": "http://example.com/product9.jpg",
       "description": "Description for product 9",
       "available": true
-    },
-    {
-      "name": "Hello",
-      "price": "100",
-      "imageUrl": "https://picsum.photos/200/120",
-      "available": "on",
-      "description": "abcd",
-      "category": "1",
-      "id": 11
-    },
-    {
-      "name": "Hello 2",
-      "price": "1000",
-      "imageUrl": "https://picsum.photos/200/120",
-      "available": "on",
-      "description": "abcdef",
-      "category": "2",
-      "id": 12
-    },
-    {
-      "name": "New Product",
-      "price": "10000",
-      "imageUrl": "https://picsum.photos/200/120",
-      "available": "on",
-      "description": "abcd",
-      "category": "2",
-      "id": 13
-    },
-    {
-      "name": "New Product",
-      "price": "10000",
-      "imageUrl": "https://picsum.photos/200/120",
-      "available": false,
-      "description": "abcd",
-      "category": "2",
-      "id": 14
-    },
-    {
-      "name": "New Product 2",
-      "price": "1000",
-      "imageUrl": "abcd",
-      "available": true,
-      "description": "abcd",
-      "category": "1",
-      "id": 15
     }
   ]
 }
