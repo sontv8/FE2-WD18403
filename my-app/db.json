@@ -83,6 +83,24 @@
       "pictureUrl": "http://example.com/product9.jpg",
       "description": "Description for product 9",
       "available": true
+    },
+    {
+      "name": "New Product 100",
+      "price": "100",
+      "imageUrl": "https://picsum.photos/200/120",
+      "available": true,
+      "description": "abcd",
+      "category": "2",
+      "id": 11
+    },
+    {
+      "name": "New Product 101",
+      "price": "101",
+      "imageUrl": "https://picsum.photos/200/120",
+      "available": true,
+      "description": "gggg",
+      "category": "1",
+      "id": 12
     }
   ]
 }

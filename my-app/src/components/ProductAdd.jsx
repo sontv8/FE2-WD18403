@@ -1,6 +1,35 @@
-import React from "react";
+import { useMutation } from "@tanstack/react-query";
+import axios from "axios";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const ProductAdd = ({ onHandleChange, onHandleSubmit }) => {
+const ProductAdd = () => {
+  const [product, setProduct] = useState({});
+  const navigate = useNavigate();
+
+  const mutation = useMutation({
+    mutationFn: async (product) => {
+      await axios.post("http://localhost:3000/products", product);
+    },
+    onSuccess: () => {
+      navigate("/products");
+    },
+  });
+
+  const onHandleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    const newProduct = {
+      ...product,
+      [name]: type == "checkbox" ? checked : value,
+    };
+    // computed property name
+    setProduct(newProduct);
+  };
+  const onHandleSubmit = async (e) => {
+    e.preventDefault();
+    mutation.mutate(product);
+  };
+
   return (
     <div>
       <form onSubmit={onHandleSubmit}>
@@ -58,3 +87,10 @@ const ProductAdd = ({ onHandleChange, onHandleSubmit }) => {
 };
 
 export default ProductAdd;
+
+/*
+  B1: lấy được dữ liệu nhập vào form
+  B2: submit form -> bắt sự kiện onSubmit
+  B3: call api để thêm sản phẩm mới
+  B4: điều hướng về trang danh sách sản phẩm
+*/
