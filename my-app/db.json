@@ -94,12 +94,12 @@
       "id": 11
     },
     {
-      "name": "New Product 101",
-      "price": "101",
+      "name": "New Product 101 update 2",
+      "price": "2222",
       "imageUrl": "https://picsum.photos/200/120",
-      "available": true,
-      "description": "gggg",
-      "category": "1",
+      "available": false,
+      "description": "22222",
+      "category": "2",
       "id": 12
     }
   ]
