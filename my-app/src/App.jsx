@@ -6,15 +6,22 @@ import { Route, Routes } from "react-router-dom";
 import ProductList from "./components/ProductList";
 import ProductAdd from "./components/ProductAdd";
 import ProductUpdate from "./components/ProductUpdate";
+import Dashboard from "./pages/Dashboard";
+import AdminLayout from "./layouts/AdminLayout";
+import ProductManagement from "./pages/ProductManagement";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<h1>Home Page</h1>} />
+        {/* <Route path="/" element={<h1>Home Page</h1>} />
         <Route path="/products" element={<ProductList />} />
         <Route path="/products/add" element={<ProductAdd />} />
-        <Route path="/products/:id/update" element={<ProductUpdate />} />
+        <Route path="/products/:id/update" element={<ProductUpdate />} /> */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="products" element={<ProductManagement />} />
+        </Route>
       </Routes>
     </>
   );
