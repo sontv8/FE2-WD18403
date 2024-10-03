@@ -87,7 +87,7 @@
     {
       "name": "New Product 100",
       "price": "100",
-      "imageUrl": "https://picsum.photos/200/120",
+      "imageUrl": "https://picsum.photos/500/300",
       "available": true,
       "description": "abcd",
       "category": "2",
@@ -96,7 +96,7 @@
     {
       "name": "New Product 101 update 2",
       "price": "2222",
-      "imageUrl": "https://picsum.photos/200/120",
+      "imageUrl": "https://picsum.photos/500/300",
       "available": false,
       "description": "22222",
       "category": "2",
