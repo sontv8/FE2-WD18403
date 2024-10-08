@@ -9,6 +9,7 @@ import ProductUpdate from "./components/ProductUpdate";
 import Dashboard from "./pages/Dashboard";
 import AdminLayout from "./layouts/AdminLayout";
 import ProductManagement from "./pages/ProductManagement";
+import AddProduct from "./pages/AddProduct";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="products" element={<ProductManagement />} />
+          <Route path="products/add" element={<AddProduct />} />
         </Route>
       </Routes>
     </>
