@@ -69,6 +69,15 @@
       "description": "abcd",
       "category": "cate1",
       "id": 14
+    },
+    {
+      "name": "Seraphine",
+      "price": 10000,
+      "available": true,
+      "description": "LOL",
+      "category": "cate2",
+      "imageUrl": "https://res.cloudinary.com/dxhgeg7vi/image/upload/v1728554087/vqgi0fmn0mdmflrtlena.jpg",
+      "id": 15
     }
   ]
 }
